@@ -112,6 +112,8 @@ You will also need the Wrangler CLI for the backend and Yarn/Node.js for the fro
 
 - [ ] Restrict CORS
 - [ ] Add authentication to the backend
+- [ ] Edit habits
+- [ ] Delete habits
 - [ ] Make the date selector work
 - [ ] Add a GitHub-like heatmap to explore trends
 
