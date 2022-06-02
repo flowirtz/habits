@@ -110,11 +110,11 @@ You will also need the Wrangler CLI for the backend and Yarn/Node.js for the fro
 
 ## Roadmap
 
+- [x] Make the date selector work
 - [ ] Restrict CORS
 - [ ] Add authentication to the backend
 - [ ] Edit habits
 - [ ] Delete habits
-- [ ] Make the date selector work
 - [ ] Add a GitHub-like heatmap to explore trends
 
 See the [open issues](https://github.com/flowirtz/habits/issues) for a full list of proposed features (and known issues).
