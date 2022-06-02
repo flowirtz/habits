@@ -12,6 +12,7 @@ import {
 } from "./api";
 
 import InlineHabit from "./inline-habit";
+import MobileDateSelector from "./mobile-date-selector";
 
 interface IHabitList {
   user: any;
@@ -19,6 +20,7 @@ interface IHabitList {
 
 const HabitList = ({ user }: IHabitList) => {
   const todaysDate = new Date().toISOString().slice(0, 10);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const [inEditMode, setInEditMode] = useState(false);
   const [localHabitsStore, setLocalHabitsStore] = useState<IHabitStore>({
@@ -121,6 +123,7 @@ const HabitList = ({ user }: IHabitList) => {
                         inEditMode={false}
                         key={`habit-${habitIdx}`}
                         handleCompleted={handleCompleteHabit}
+                        selectedDate={selectedDate}
                       />
                     ))}
                     {(inEditMode || data.habits.length === 0) && (
@@ -135,6 +138,10 @@ const HabitList = ({ user }: IHabitList) => {
           </div>
         </div>
       </main>
+      <MobileDateSelector
+        selectedDate={selectedDate}
+        setSelectedDate={setSelectedDate}
+      />
     </div>
   );
 };

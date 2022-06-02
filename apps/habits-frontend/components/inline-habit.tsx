@@ -6,11 +6,16 @@ interface IInlineHabit {
   habit: IHabit;
   handleCompleted: any;
   inEditMode: boolean;
+  selectedDate: any;
 }
 
-const InlineHabit = ({ habit, handleCompleted }: IInlineHabit) => {
-  const todaysDate = new Date().toISOString().slice(0, 10);
-  const isChecked = todaysDate in habit.dates_completed;
+const InlineHabit = ({
+  habit,
+  handleCompleted,
+  selectedDate,
+}: IInlineHabit) => {
+  const isChecked =
+    selectedDate.toISOString().slice(0, 10) in habit.dates_completed;
 
   return (
     <div className="relative flex items-start py-4">

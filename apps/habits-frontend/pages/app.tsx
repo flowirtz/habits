@@ -3,7 +3,6 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 import HabitList from "../components/habit-list";
 import Layout from "../components/layout";
-import MobileDateSelector from "../components/mobile-date-selector";
 import { ExclamationIcon } from "@heroicons/react/solid";
 
 export async function getStaticProps() {
@@ -51,7 +50,6 @@ export default withPageAuthRequired(function IndexPage({ postList, user }) {
         </div>
         <HabitList user={user} />
       </section>
-      <MobileDateSelector />
     </Layout>
   );
 });
