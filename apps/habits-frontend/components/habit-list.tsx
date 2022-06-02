@@ -84,31 +84,29 @@ const HabitList = ({ user }: IHabitList) => {
   };
 
   return (
-    <div className="py-10">
-      <header>
-        <div className="inline-flex justify-between w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold leading-tight text-gray-900">
-            Daily Habits
-          </h1>
-          <button
-            type="button"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-            onClick={() => setInEditMode(!inEditMode)}
-          >
-            {inEditMode ? (
-              <CheckIcon
-                className="w-5 h-5 mr-2 -ml-1 text-gray-500"
-                aria-hidden="true"
-              />
-            ) : (
-              <PlusIcon
-                className="w-5 h-5 mr-2 -ml-1 text-gray-500"
-                aria-hidden="true"
-              />
-            )}
-            {inEditMode ? "Done" : "Add"}
-          </button>
-        </div>
+    <div className="py-10 mx-auto max-w-7xl">
+      <header className="inline-flex justify-between w-full px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl font-bold leading-tight text-gray-900">
+          Daily Habits
+        </h1>
+        <button
+          type="button"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          onClick={() => setInEditMode(!inEditMode)}
+        >
+          {inEditMode ? (
+            <CheckIcon
+              className="w-5 h-5 mr-2 -ml-1 text-gray-500"
+              aria-hidden="true"
+            />
+          ) : (
+            <PlusIcon
+              className="w-5 h-5 mr-2 -ml-1 text-gray-500"
+              aria-hidden="true"
+            />
+          )}
+          {inEditMode ? "Done" : "Add"}
+        </button>
       </header>
       <main>
         <div className="mx-auto max-w-7xl sm:px-4">
