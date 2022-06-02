@@ -10,6 +10,7 @@ yarn dev
 ### Creating a new KV namespace
 
 ```bash
+wrangler init habits-backend
 wrangler kv:namespace create "HABITS"
 wrangler kv:namespace create "HABITS" --preview
 ```

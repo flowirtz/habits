@@ -22,7 +22,7 @@
     <!-- <a href="https://github.com/flowirtz/habits"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
     <br />
-    <a href="https://github.com/flowirtz/habits">View Demo</a>
+    <a href="https://habits.flowirtz.dev/">View Demo</a>
     ·
     <a href="https://github.com/flowirtz/habits/issues">Report Bug</a>
     ·
@@ -49,7 +49,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -62,9 +61,15 @@
 
 ## About The Project
 
-<img src="./images/app-screenshot.png" alt="Screenshot of the Habits app" height="400"/>
+<img src="./images/app-screenshot.png" alt="Screenshot of the Habits app" height="400"/> <br /><br />
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following.
+> "When you learn to transform your habits, you can transform your life."
+> <br />
+> -James Clear, Author of Atomic Habits
+
+_habits_ is a habit tracker that's built on the Cloudflare stack. It allows you to easily track your habits and build new ones.
+
+This project was built as part of [Cloudflare's Spring Developer Challenge](https://challenge.developers.cloudflare.com/) 2022. It is a fully working app.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,43 +87,22 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You will need a Cloudflare account as well as an Auth0 account to run the app. The free versions are sufficient for both of them.
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You will also need the Wrangler CLI for the backend and Yarn/Node.js for the frontend.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/flowirtz/habits.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+2. Follow the instructions in `apps/habits-frontend/README.md` to install the frontend.
+3. Follow the instructions in `apps/habits-backend/README.md` to install the backend.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -126,12 +110,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Deploy
 - [ ] Restrict CORS
-
 - [ ] Add authentication to the backend
-- [ ] Make date selector work
-- [ ] Add a GitHub-like heatmap
+- [ ] Make the date selector work
+- [ ] Add a GitHub-like heatmap to explore trends
 
 See the [open issues](https://github.com/flowirtz/habits/issues) for a full list of proposed features (and known issues).
 
