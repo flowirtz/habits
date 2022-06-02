@@ -1,0 +1,6 @@
+name = "habits-backend"
+main = "src/index.ts"
+compatibility_date = "2022-05-24"
+kv_namespaces = [
+  { binding = "HABITS", id = "1eacc89b4af2452da8410f3b5bf5536c", preview_id = "651658b0baed481196f3e3444a7cb570" }
+]
