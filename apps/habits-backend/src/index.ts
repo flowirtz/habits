@@ -4,6 +4,9 @@ import * as CORS from "worktop/cors";
 
 import * as Habits from "./routes";
 
+// Populated by workers environment variable
+declare const CORS_ALLOW_ORIGIN: string;
+
 const API = new Router();
 
 /**
@@ -11,14 +14,11 @@ const API = new Router();
  * NOTE: Call `CORS.preflight` per-route for individual settings.
  */
 API.prepare = CORS.preflight({
-  origin: "*", //TODO: Only allow requests from domains in whitelist
+  origin: CORS_ALLOW_ORIGIN,
   headers: ["Cache-Control", "Content-Type", "X-Count"],
   methods: ["GET", "HEAD", "PUT", "POST", "PATCH", "DELETE"],
 });
 
-/**
- * NOTE: Demo expects hard-coded ":username" value.
- */
 API.add("GET", "/users/:username/habits", Habits.list);
 API.add("POST", "/users/:username/habits", Habits.create);
 API.add("GET", "/users/:username/habits/:uid", Habits.show);

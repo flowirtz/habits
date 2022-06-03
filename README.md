@@ -111,7 +111,7 @@ You will also need the Wrangler CLI for the backend and Yarn/Node.js for the fro
 ## Roadmap
 
 - [x] Make the date selector work
-- [ ] Restrict CORS
+- [x] [Restrict CORS](https://github.com/flowirtz/habits/issues/1)
 - [ ] Add authentication to the backend
 - [ ] Edit habits
 - [ ] Delete habits
